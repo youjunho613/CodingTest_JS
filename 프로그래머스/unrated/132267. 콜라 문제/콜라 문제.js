@@ -7,9 +7,9 @@
 
         n = (n / a) * b;
       } else {
-        answer += parseInt(n / a) * b;
+        answer += Math.floor(n / a) * b;
 
-        n = parseInt(n / a) * b + (n % a);
+        n = Math.floor(n / a) * b + (n % a);
       }
     }
     return answer;
