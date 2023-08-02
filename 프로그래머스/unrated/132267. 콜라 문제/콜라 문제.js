@@ -1,16 +1,11 @@
-  function solution(a, b, n) {
-    let answer = 0;
 
+function solution(a, b, n) {
+    let coke = 0;
+    
     while (n >= a) {
-      if (n % a === 0) {
-        answer += (n / a) * b;
-
-        n = (n / a) * b;
-      } else {
-        answer += Math.floor(n / a) * b;
-
-        n = Math.floor(n / a) * b + (n % a);
-      }
+        coke += Math.floor(n / a) * b  
+        n = (n % a) + (b * Math.floor(n / a))
     }
-    return answer;
-  }
+    
+    return coke
+}
